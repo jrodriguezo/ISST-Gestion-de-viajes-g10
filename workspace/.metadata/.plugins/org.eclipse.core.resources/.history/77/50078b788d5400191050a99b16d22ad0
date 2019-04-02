@@ -1,0 +1,27 @@
+package es.upm.dit.isst.webLab.model;
+
+import java.io.Serializable;
+
+import javax.persistence.*;
+
+@Entity
+public class TFG implements Serializable{
+	@Id
+	private String email;
+	private String password;
+	private String name;
+	private String title;
+	private int status;
+	
+	@Lob
+	private byte[] document;
+	private double grade;
+	
+	@ManyToOne
+	private Professor advisor;
+	
+	public TFG() {
+		
+	}
+}
+

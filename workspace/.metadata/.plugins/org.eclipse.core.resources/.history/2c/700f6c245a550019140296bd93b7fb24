@@ -1,0 +1,18 @@
+package es.upm.dit.isst.trip.dao;
+
+import java.util.Collection;
+
+import es.upm.dit.isst.trip.model.Viaje;
+
+public interface TFGDAO {
+	
+	public void create(Viaje tfg);
+	
+	public Viaje read(String email);
+	
+	public void update(Viaje tfg);
+	
+	public void delete(Viaje tfg);
+	
+	public Collection<Viaje> readAll();
+}

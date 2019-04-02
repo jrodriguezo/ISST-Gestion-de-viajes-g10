@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ISST-19-CRIS&apos; to &apos;ISST-Grupo10-Trip&apos;" description="Rename resource &apos;ISST-19-CRIS&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ISST-19-CRIS" name="ISST-Grupo10-Trip" stamp="1554207996772" updateReferences="true"/>
+</session>

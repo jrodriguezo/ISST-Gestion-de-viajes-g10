@@ -1,0 +1,9 @@
+package es.upm.dit.isst.webLab.dao;
+
+public class TFGDAO {
+	public void create(TFG tfg);
+	public TFG rea(String email);
+	public void update(TFG tfg);
+	public void delete(TFG tfg);
+	public Collection<TFG> readAll();
+}

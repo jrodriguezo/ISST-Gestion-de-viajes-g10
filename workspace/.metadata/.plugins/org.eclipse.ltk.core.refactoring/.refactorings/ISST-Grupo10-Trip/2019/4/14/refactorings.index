@@ -1,0 +1,36 @@
+1554130465730	Delete element
+1554131817139	Infer generic type arguments
+1554134149351	Copy compilation unit
+1554140526192	Copy file
+1554140770691	Copy compilation unit
+1554200364624	Copy compilation unit
+1554200469968	Copy file
+1554209894845	Delete element
+1554209915310	Rename package 'es.upm.dit.isst.webLab.dao'
+1554209925712	Rename package 'es.upm.dit.isst.webLab.model'
+1554209937948	Rename package 'es.upm.dit.isst.webLab.servlets'
+1554209946202	Delete element
+1554210827351	Delete elements
+1554210966324	Delete element
+1554211235041	Rename type 'Professor'
+1554211245129	Rename type 'TFG'
+1554211387025	Rename field 'advisedTFGs'
+1554212019476	Copy compilation unit
+1554212208735	Delete element
+1554212251553	Delete element
+1554214373538	Delete elements
+1554214376470	Delete element
+1554216041504	Delete elements
+1554216051597	Delete element
+1554216835806	Copy compilation unit
+1554217337466	Copy compilation unit
+1554217720775	Rename type 'ProfessorDAO'
+1554217845087	Rename type 'ProfessorDAOImplementation'
+1554218125822	Delete elements
+1554218151533	Copy compilation units
+1554218493442	Rename type 'CreateProfessorServlet'
+1554218853042	Delete element
+1554218862031	Delete element
+1554218898129	Rename resource 'AdminView.jsp'
+1554219297749	Rename type 'AdminServlet'
+1554219339528	Delete element

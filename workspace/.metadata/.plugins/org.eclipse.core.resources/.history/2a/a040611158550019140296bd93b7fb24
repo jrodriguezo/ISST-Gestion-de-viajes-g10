@@ -1,0 +1,29 @@
+package es.upm.dit.isst.trip.model;
+
+import java.util.Collection;
+
+import javax.persistence.*;
+
+@Entity
+public class Empleado {
+	
+	@Id
+	private String email;
+	private int id;
+	
+	private String password;
+	private String name;
+	
+	@OneToMany(mappedBy = "viajero", fetch = FetchType.EAGER)
+	private Viaje viaje;
+	
+	@OneToMany(mappedBy = "superior", fetch = FetchType.EAGER)
+	private Empleado subordinado;
+	
+	public Empleado() {}
+
+	//getters y setters
+
+
+
+}

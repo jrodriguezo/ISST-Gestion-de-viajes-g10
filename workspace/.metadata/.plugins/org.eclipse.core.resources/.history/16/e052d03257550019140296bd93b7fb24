@@ -1,0 +1,28 @@
+package es.upm.dit.isst.trip.model;
+
+import java.util.Collection;
+
+import javax.persistence.*;
+
+@Entity
+public class Reembolso {
+	
+	@Id
+	private String email;
+	private String password;
+	private String name;
+	private int id;
+	
+	@OneToMany(mappedBy = "viajero", fetch = FetchType.EAGER)
+	private Viaje viaje;
+	
+	@OneToMany(mappedBy = "superior", fetch = FetchType.EAGER)
+	private Reembolso subordinado;
+	
+	public Reembolso() {}
+
+	//getters y setters
+
+
+
+}

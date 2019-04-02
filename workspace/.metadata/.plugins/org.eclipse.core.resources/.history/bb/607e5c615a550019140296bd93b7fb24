@@ -1,0 +1,18 @@
+package es.upm.dit.isst.trip.dao;
+
+import java.util.Collection;
+
+import es.upm.dit.isst.trip.model.Viaje;
+
+public interface ViajeDAO {
+	
+	public void create(Viaje viaje);
+		
+	public Viaje read(String nViaje);
+
+	public void update(Viaje empleado);
+	
+	public void delete(Viaje empleado);
+	
+	public Collection<Viaje> readAll();
+}

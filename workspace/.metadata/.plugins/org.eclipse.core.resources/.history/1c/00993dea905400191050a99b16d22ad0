@@ -1,0 +1,68 @@
+package es.upm.dit.isst.webLab.dao;
+
+import java.util.Collection;
+
+import org.hibernate.Session;
+
+import es.upm.dit.isst.webLab.model.Professor;
+import es.upm.dit.isst.webLab.model.TFG;
+
+public class ProfessorDAOImplementation implements ProfessorDAO{
+
+	private static ProfessorDAOImplementation instancia = null;
+	private ProfessorDAOImplementation() {}
+	public static ProfessorDAOImplementation getInstancia() {
+		if(instancia == null)
+			instancia = new ProfessorDAOImplementation();
+		return instancia;
+	}
+	
+	@Override
+	public void create(Professor professor) {
+		Session session = SessionFactoryService.get().openSession();
+		try {
+			session.beginTransaction();
+			session.save(professor);
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			
+		} finally {
+			session.close();
+		}		
+	}
+
+	@Override
+	public Professor read(String email) {
+		Professor professor = null;
+		Session session = SessionFactoryService.get().openSession();
+		try {
+			session.beginTransaction(); 
+			professor = session.load( Professor.class, email ); 
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			
+		} finally {
+			session.close();
+			return professor;
+		}
+	}
+
+	@Override
+	public void update(Professor professor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Professor professor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Collection<Professor> readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

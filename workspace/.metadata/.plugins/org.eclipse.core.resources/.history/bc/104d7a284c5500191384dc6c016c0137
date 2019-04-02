@@ -1,0 +1,28 @@
+package es.upm.dit.isst.trip.model;
+
+import java.util.Collection;
+
+import javax.persistence.*;
+
+@Entity
+public class Factura {
+	
+	@Id
+	private String email;
+	private String password;
+	private String name;
+	private int id;
+	
+	@OneToMany(mappedBy = "viajero", fetch = FetchType.EAGER)
+	private Collection<Viaje> viajes;
+	
+	@OneToMany(mappedBy = "superior", fetch = FetchType.EAGER)
+	private Factura subordinado;
+	
+	public Factura() {}
+
+	//getters y setters
+	
+	
+
+}

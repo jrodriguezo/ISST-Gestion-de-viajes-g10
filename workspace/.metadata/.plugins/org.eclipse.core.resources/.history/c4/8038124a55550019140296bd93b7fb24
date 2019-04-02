@@ -1,0 +1,89 @@
+/*** LIU ***/
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.datos {
+    padding: 30px;
+    background-color: #fefefe
+}
+
+.viaje{
+    padding: 30px;
+    background-color: #d1d1d1;
+}
+
+.listaviajes{
+    background-color: #dddddd;
+    padding: 40px;
+}
+.descripcion{
+     padding: 40px;
+ }
+.notificaciones {
+    padding: 30px;
+    background-color: #eeeeee;
+}
+
+@media  (max-height: 768px) {
+
+}
+
+@media (min-width: 768px){
+
+
+
+}
+
+.requestForm{
+    padding-top: 5em;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.form-row{
+    padding-bottom: 4%;
+}
+
+.form-control{
+    padding-top: 1px;
+}
+
+.IBAN {
+  text-transform: uppercase;
+}
+
+.btn-aceptar{
+    background-color: #00adb5;
+    color: #fff;
+}
+
+
+/** JESUS **/
+
+
+
+.body{
+    background: #6c757d;
+    text-decoration-color: black;
+}
+
+.circulo{
+    weight: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+form {
+	margin-top: 4%;
+	padding: 2%;
+}
+
+.form-row .form-group-row .form-group{
+	margin-top: 1%;
+}
+
+.contenedor{
+	padding: 3%;
+}

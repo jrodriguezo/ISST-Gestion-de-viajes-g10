@@ -1,0 +1,99 @@
+package es.upm.dit.isst.trip.dao;
+
+import java.util.Collection;
+
+import org.hibernate.Session;
+
+import es.upm.dit.isst.trip.model.Empleado;
+
+public class EmpleadoDAOImplementation implements EmpleadoDAO{
+
+	private static EmpleadoDAOImplementation instancia = null;
+	private EmpleadoDAOImplementation() {}
+	public static EmpleadoDAOImplementation getInstance() {
+		if(instancia == null)
+			instancia = new EmpleadoDAOImplementation();
+		return instancia;
+	}
+	
+	@Override
+	public void create(Empleado empleado) {
+		Session session = SessionFactoryService.get().openSession();
+		try {
+			session.beginTransaction();
+			session.save(professor);
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			
+		} finally {
+			session.close();
+		}		
+	}
+
+	@SuppressWarnings("finally")
+	@Override
+	public Empleado read(String email) {
+		Empleado professor = null;
+		Session session = SessionFactoryService.get().openSession();
+		try {
+			session.beginTransaction(); 
+			professor = session.load( Empleado.class, email ); 
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			
+		} finally {
+			session.close();
+			return professor;
+		}
+	}
+
+	@Override
+	public void update(Empleado professor) {
+		Session session = SessionFactoryService.get().openSession();
+		try {
+			session.beginTransaction(); 
+			session.saveOrUpdate( professor ); 
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			
+		} finally {
+			session.close();
+		}		
+	}
+
+	@Override
+	public void delete(Empleado professor) {
+		Session session = SessionFactoryService.get().openSession();
+		try {
+			session.beginTransaction(); 
+			session.delete( professor ); 
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			
+		} finally {
+			session.close();
+		}			
+	}
+
+	@SuppressWarnings({ "finally", "unchecked" })
+	@Override
+	public Collection<Empleado> readAll() {
+		Session session = SessionFactoryService.get().openSession();
+		Collection<Empleado> professors = null;
+		try {
+			session.beginTransaction(); 
+			professors = session.createQuery( "from Professor" ).list(); 
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			
+		} finally {
+			session.close();
+			return professors;
+		}	
+	}
+	@Override
+	public Empleado read(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

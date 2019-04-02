@@ -36,6 +36,29 @@ body {
 
 }
 
+.requestForm{
+    padding-top: 5em;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.form-row{
+    padding-bottom: 4%;
+}
+
+.form-control{
+    padding-top: 1px;
+}
+
+.IBAN {
+  text-transform: uppercase;
+}
+
+.btn-aceptar{
+    background-color: #00adb5;
+    color: #fff;
+}
+
 
 /** JESUS **/
 

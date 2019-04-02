@@ -1,0 +1,27 @@
+package es.upm.dit.isst.trip.model;
+
+import java.io.Serializable;
+
+import javax.persistence.*;
+
+@Entity
+public class Viaje implements Serializable{
+	
+	@Id
+	private String nViaje;
+
+	@Lob
+	private String descripcion;
+	private int status;
+	//private Date fechaComienzo; qu¨¦ usar date?
+	private int duracion; //en d¨ªas
+	private double presupuesto;
+	
+	@OneToMany(mappedBy = "viaje", fetch = FetchType.EAGER)
+	private Facturas facturas; //Facturas por poner
+	
+	public Viaje() {}
+
+	
+}
+

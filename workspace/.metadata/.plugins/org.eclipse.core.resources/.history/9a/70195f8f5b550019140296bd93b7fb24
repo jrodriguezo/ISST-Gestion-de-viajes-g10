@@ -1,0 +1,78 @@
+package es.upm.dit.isst.trip.model;
+
+import java.util.Collection;
+
+import javax.persistence.*;
+
+@Entity
+public class Empleado {
+	
+	@Id
+	private int id;
+	private String email;
+	
+	private String password;
+	private String name;
+	
+	@OneToMany(mappedBy = "viajero", fetch = FetchType.EAGER)
+	private Viaje viaje;
+	
+	@OneToMany(mappedBy = "superior", fetch = FetchType.EAGER)
+	private Empleado subordinado;
+	
+	public Empleado() {}
+
+	//getters y setters
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Viaje getViaje() {
+		return viaje;
+	}
+
+	public void setViaje(Viaje viaje) {
+		this.viaje = viaje;
+	}
+
+	public Empleado getSubordinado() {
+		return subordinado;
+	}
+
+	public void setSubordinado(Empleado subordinado) {
+		this.subordinado = subordinado;
+	}
+
+
+
+
+}

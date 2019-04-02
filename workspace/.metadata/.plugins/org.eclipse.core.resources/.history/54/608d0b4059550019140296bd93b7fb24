@@ -1,0 +1,18 @@
+package es.upm.dit.isst.trip.dao;
+
+import java.util.Collection;
+
+import es.upm.dit.isst.trip.model.Empleado;
+
+public interface EmpleadoDAO {
+	
+	public void create(Empleado professor);
+	
+	public Empleado read(String email);
+	
+	public void update(Empleado professor);
+	
+	public void delete(Empleado professor);
+	
+	public Collection<Empleado> readAll();
+}

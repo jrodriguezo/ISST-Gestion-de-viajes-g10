@@ -1,0 +1,47 @@
+package es.upm.dit.isst.trip.servlets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.shiro.crypto.hash.Sha256Hash;
+
+import es.upm.dit.isst.trip.dao.EmpleadoDAO;
+import es.upm.dit.isst.trip.dao.ProfessorDAOImplementation;
+import es.upm.dit.isst.trip.dao.TFGDAO;
+import es.upm.dit.isst.trip.dao.TFGDAOImplementation;
+import es.upm.dit.isst.trip.model.Empleado;
+import es.upm.dit.isst.trip.model.Viaje;
+
+@WebServlet("/CreateTFGServlet")
+public class CreateTFGServlet extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String name = req.getParameter( "name" );
+		String password = req.getParameter( "password" );
+		String email = req.getParameter( "email" );
+		String title = req.getParameter("title");
+		String professor = req.getParameter("advisor");
+		
+		EmpleadoDAO pdao = ProfessorDAOImplementation.getInstance();
+		Empleado advisor = pdao.read(professor);
+
+		Viaje tfg = new Viaje();
+		tfg.setName( name );
+		tfg.setEmail( email );
+		tfg.setTitle( title );
+		tfg.setAdvisor( advisor );
+		
+		tfg.setPassword( new Sha256Hash( password ).toString() );
+	
+		TFGDAO tdao = TFGDAOImplementation.getInstance();
+		
+		tdao.create( tfg );
+		
+		resp.sendRedirect( req.getContextPath() + "/TFGServlet" );
+	}
+}
