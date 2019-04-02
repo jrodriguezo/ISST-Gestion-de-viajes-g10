@@ -3,3 +3,5 @@ D:\Dropbox\ISST\Laboratorio\workspace\.metadata\.plugins\org.eclipse.jst.jsp.cor
 \ISST-19-CRIS\src
 D:\Dropbox\ISST\Trabajo\ISST-Grupo10-Trip\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2157554070.index
 \ISST-Grupo10-Trip\src
+D:\Dropbox\ISST\Trabajo\ISST-Grupo10-Trip\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\541757622.index
+\Trip\src
